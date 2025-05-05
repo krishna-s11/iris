@@ -1,0 +1,88 @@
+.login_card h1{
+    font-weight: 700;
+    font-size: 50px;
+}
+.login_sub{
+    font-weight: 400;
+    font-size: 16px;
+    color: #A0AEC0;
+    margin-bottom: 50px;
+}
+.login_label{
+    font-weight: 600;
+    font-size: 16px;
+    margin-left: 5px;
+}
+.login_input {
+    width: 100%;
+    height: 50px;
+    border-radius: 20px;
+    padding: 0 20px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px solid #99C8FF;
+    margin: 10px 0;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.remember_me{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-left: 5px;
+}
+.switch {
+    width: 36px;
+    height: 18.5px;
+    border-radius: 97.74px;
+    display: flex;
+    align-items: center;
+    background-color: gray;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+    padding: 2px;
+}
+.switchball {
+    width: 13.5px;
+    height: 13.5px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    transition: transform 0.3s ease;
+}
+.switch.active {
+    background-color: #0075FF;
+}
+.switch.active .switchball {
+    transform: translateX(17px);
+}
+.btn_signIn{
+    width: 100%;
+    height: 45px;
+    background: #0075FF;
+    border-radius: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: all 0.5s;
+}
+.btn_signIn:hover{
+    background: #0160cd;
+    transform: translateY(-2px);
+}
+.btn_signIn:active{
+    transform: translateY(0);
+}
+.ln_register{
+    text-align: center;
+    color: #A0AEC0;
+}
+.ln_register span{
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+}

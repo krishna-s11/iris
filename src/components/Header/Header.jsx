@@ -1,0 +1,17 @@
+import React from 'react'
+import "./header.css";
+import bell from "../../assets/bell.svg";
+
+const Header = () => {
+  return (
+    <div className='header'>
+        <div className='header_left'>
+            <p>Octify / <span>Home</span></p>
+            <p>Dashboard</p>
+        </div>
+        <img src={bell} alt="notifications" srcset="" />
+    </div>
+  )
+}
+
+export default Header

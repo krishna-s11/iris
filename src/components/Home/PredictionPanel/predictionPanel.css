@@ -1,0 +1,62 @@
+.predictionPanel{
+    width: 320px;
+    height: 344px;
+    margin-left: 30px;
+    background: linear-gradient(126.97deg, rgba(6, 11, 40, 0.74) 28.26%, rgba(10, 14, 35, 0.71) 91.2%);
+    backdrop-filter: blur(120px);
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 30px 20px;
+    position: relative;
+}
+.predictionPanel h1{
+    font-weight: 700;
+    font-size: 18px;
+}
+.prediction_subtitle{
+    font-weight: 400;
+    font-size: 14px;
+    color: #A0AEC0;
+}
+.progress_holder{
+    position: relative;
+    margin-top: -10px;
+}
+#progress_img{
+    transform: translateX(-7px);
+}
+#prediction_btc{
+    width: 50px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-55%,-50%);
+}
+.prediction_content {
+    width: 293px;
+    height: 82px;
+    border-radius: 20px;
+    background: linear-gradient(126.97deg, rgba(6, 11, 40, 0.74) 28.26%, rgba(10, 14, 35, 0.71) 91.2%);
+    backdrop-filter: blur(120px);
+    -webkit-backdrop-filter: blur(120px);
+    position: absolute;
+    top: 224px;
+    left: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+}
+
+.prediction_content h2{
+    font-size: 14px;
+    font-weight: 700;
+}
+.prediction_content p{
+    font-size: 12px;
+    color: #A0AEC0;
+}
+.confidence_text{
+    font-size: 24px;
+}

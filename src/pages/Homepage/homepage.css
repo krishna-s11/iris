@@ -1,0 +1,66 @@
+.homepage{
+    width: 100%;
+    margin-top: 30px;
+}
+.home_topholder{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.home_personal_metric{
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(126.97deg, rgba(6, 11, 38, 0.74) 28.26%, rgba(26, 31, 55, 0.5) 91.2%);
+    backdrop-filter: blur(120px);
+    -webkit-backdrop-filter: blur(120px);
+    padding: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.home_personal_metric p:first-child{
+    font-size: 12px;
+    font-weight: 400;
+    color: #A0AEC0;
+}
+.home_personal_metric p:last-child{
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+.home_personal_metric p span{
+    color: #01B574;
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: 5px;
+    margin-top: 1px;
+}
+.home_content_row{
+    margin-top: 20px;
+    display: flex;
+}
+.user_idcard{
+    width: 400px;
+    height: 344px;
+    background: url(../../assets/idcard.png);
+    background-size: cover;
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+}
+.user_idcard p{
+    font-weight: 400;
+    font-size: 14px;
+    color: #A0AEC0;
+}
+.user_idcard h1{
+    font-weight: 700;
+    font-size: 28px;
+    color: #FFFFFF;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}

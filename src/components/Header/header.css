@@ -1,0 +1,17 @@
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_left p:first-child{
+    color: #A0AEC0;
+}
+.header_left p span{
+    color: #fff;
+}
+.header img{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}

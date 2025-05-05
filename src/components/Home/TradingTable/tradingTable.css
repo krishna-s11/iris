@@ -1,0 +1,31 @@
+.trading_table{
+    width: 750px;
+    height: 344px;
+    background: linear-gradient(126.97deg, rgba(6, 11, 40, 0.74) 28.26%, rgba(10, 14, 35, 0.71) 91.2%);
+    backdrop-filter: blur(120px);
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 30px 20px;
+}
+.trading_table h1{
+    font-weight: 700;
+    font-size: 18px;
+}
+.trading_table table{
+    width: 100%;
+    margin-top: 20px;
+    text-align: left;
+}
+.trading_table th{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0%;
+}
+.trading_table th:first-child{
+    width: 150px;
+}
+.trading_table th{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #56577A;
+}

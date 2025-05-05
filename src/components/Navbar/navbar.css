@@ -1,0 +1,44 @@
+.navbar{
+    width: 100%;
+    height: 60px;
+    padding: 70px;
+    z-index: 999;
+    position: relative;
+}
+.main_logo{
+    width: 134px;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    width: 300px;
+    font-weight: 400;   
+}
+.navbar ul li{
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.navbar ul li:hover{
+    transform: scale(1.1);
+}
+.btn_contactus{
+    padding: 7px 30px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 700;
+    background-color: transparent;
+    border: 3px solid #fff;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.btn_contactus:hover{
+    /* padding: 8px 32px; */
+    border-color: #6B54F5;
+}
