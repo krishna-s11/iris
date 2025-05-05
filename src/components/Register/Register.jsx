@@ -30,7 +30,7 @@ const Register = () => {
     try {
       const { email, password, binance_api_key, binance_api_secret } = formData;
 
-      const response = await axios.post('http://localhost:8000/auth/register', {
+      const response = await axios.post('https://final-backend-vyuz.onrender.com/auth/register', {
         email,
         password,
         binance_api_key,
