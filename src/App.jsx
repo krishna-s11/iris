@@ -9,12 +9,11 @@ import 'react-toastify/dist/ReactToastify.css';
 import PrivateRoute from './components/PrivateRoute'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
       <Routes>
-        <Route path="/" element={<LandingPage />}/>
+        {/* <Route path="/" element={<LandingPage />}/> */}
         <Route path="/auth/:type" element={<AuthPage />}/>
         <Route path="/dashboard/:page" element={<PrivateRoute><DashboardLayout /></PrivateRoute>}/>
       </Routes>

@@ -17,7 +17,7 @@ const AuthPage = () => {
             <IoCaretBackOutline />
           </div>
           <p>INSPIRED BY THE FUTURE</p>
-          <h1>THE OCTIFI DASHBOARD</h1>
+          <h1>THE IRIS DASHBOARD</h1>
         </div>
         <div className='auth_content'>
             {
