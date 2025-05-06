@@ -21,6 +21,7 @@
     font-size: 14px;
     line-height: 150%;
     letter-spacing: 0%;
+    color: #A0AEC0;
 }
 .trading_table th:first-child{
     width: 150px;
@@ -28,4 +29,8 @@
 .trading_table th{
     padding-bottom: 10px;
     border-bottom: 1px solid #56577A;
+}
+.trading_table td{
+    font-size: 14px;
+    padding: 10px 0;
 }
