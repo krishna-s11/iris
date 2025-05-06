@@ -78,12 +78,12 @@ const Homepage = () => {
                     <p>Step into the future.</p>
                 </div>
             </div>
-            <PredictionPanel logo={btc} name="Bitcoin (BTC)" confidence="92%"/>
-            <PredictionPanel logo={eth} name="Etherium (ETH)" confidence="95%"/>
+            <PredictionPanel logo={btc} name="Bitcoin (BTC)" confidence="92"/>
+            <PredictionPanel logo={eth} name="Etherium (ETH)" confidence="95"/>
         </div>
         <div className='home_content_row'>
                 <TradingTable />
-                <PredictionPanel logo={solana} name="Solana (SOL)" confidence="89%"/>
+                <PredictionPanel logo={solana} name="Solana (SOL)" confidence="89"/>
         </div>
     </div>
   )
