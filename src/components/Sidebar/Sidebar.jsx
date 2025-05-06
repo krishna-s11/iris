@@ -1,6 +1,6 @@
 import React from 'react'
 import "./sidebar.css";
-import logo from "../../assets/logo.webp";
+import logo from "../../assets/iris_logo.png";
 import divider from "../../assets/divider.png";
 import dash_home from "../../assets/dash_home.svg";
 import profile_ico from "../../assets/profile_ico.svg";
