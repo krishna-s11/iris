@@ -13,7 +13,7 @@ const AuthPage = () => {
   return (
     <div className='login_page'>
         <div className='auth_img_holder'>
-          <div className='auth_back' onClick={() => {navigate("https://iris-landing-xi.vercel.app/")}}>
+          <div className='auth_back' onClick={() => {window.location.replace("https://iris-landing-xi.vercel.app/")}}>
             <IoCaretBackOutline />
           </div>
           <p>INSPIRED BY THE FUTURE</p>
