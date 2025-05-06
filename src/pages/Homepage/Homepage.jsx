@@ -43,28 +43,28 @@ const Homepage = () => {
             <div className='home_personal_metric'>
                 <div>
                     <p>Total Assets</p>
-                    <p>$53,000<span> +21%</span></p>
+                    <p>$0<span> +0%</span></p>
                 </div>
                 <img src={money} alt="money" srcset="" />
             </div>
             <div className='home_personal_metric'>
                 <div>
                     <p>Today's Gain</p>
-                    <p>$29,150<span> +55%</span></p>
+                    <p>$0<span> +0%</span></p>
                 </div>
                 <img src={world} alt="money" srcset="" />
             </div>
             <div className='home_personal_metric'>
                 <div>
                     <p>ROI's</p>
-                    <p>$51,000<span> +33%</span></p>
+                    <p>$0<span> +0%</span></p>
                 </div>
                 <img src={document} alt="money" srcset="" />
             </div>
             <div className='home_personal_metric'>
                 <div>
                     <p>Total Loss</p>
-                    <p>$11,254<span style={{color: "#E31A1A"}}> -11%</span></p>
+                    <p>$0<span style={{color: "#E31A1A"}}> -0%</span></p>
                 </div>
                 <img src={money} alt="money" srcset="" />
             </div>
@@ -78,12 +78,12 @@ const Homepage = () => {
                     <p>Step into the future.</p>
                 </div>
             </div>
-            <PredictionPanel logo={btc} name="Bitcoin (BTC)"/>
-            <PredictionPanel logo={eth} name="Etherium (ETH)" />
+            <PredictionPanel logo={btc} name="Bitcoin (BTC)" confidence="92%"/>
+            <PredictionPanel logo={eth} name="Etherium (ETH)" confidence="95%"/>
         </div>
         <div className='home_content_row'>
                 <TradingTable />
-                <PredictionPanel logo={solana} name="Solana (SOL)"/>
+                <PredictionPanel logo={solana} name="Solana (SOL)" confidence="88%"/>
         </div>
     </div>
   )

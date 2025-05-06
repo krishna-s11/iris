@@ -2,7 +2,7 @@ import React from 'react'
 import "./predictionPanel.css";
 import progressbar from "../../../assets/progressbar.png";
 
-const PredictionPanel = ({logo,name}) => {
+const PredictionPanel = ({logo,name,confidence}) => {
   return (
     <div className='predictionPanel'>
         <h1>{name}</h1>
@@ -17,7 +17,7 @@ const PredictionPanel = ({logo,name}) => {
                 <p>Signal Date</p>
             </div>
             <div style={{marginRight:"10px"}}>
-                <h1 className='confidence_text' style={{fontSize: "20px"}}>95%</h1>
+                <h1 className='confidence_text' style={{fontSize: "20px"}}>{confidence}%</h1>
                 <p>Condidence %</p>
             </div>
             <div>
