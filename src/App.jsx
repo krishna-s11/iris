@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<LandingPage />}/>
+        {/* <Route path="/" element={<LandingPage />}/> */}
         <Route path="/auth/:type" element={<AuthPage />}/>
         <Route path="/dashboard/:page" element={<PrivateRoute><DashboardLayout /></PrivateRoute>}/>
       </Routes>
