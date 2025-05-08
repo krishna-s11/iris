@@ -6,7 +6,7 @@ const PredictionPanel = ({logo,name,confidence}) => {
   return (
     <div className='predictionPanel'>
         <h1>{name}</h1>
-        <p class="prediction_subtitle">OctaFi Prediction</p>
+        <p className="prediction_subtitle">Iris Prediction</p>
         <div className='progress_holder'>
             <img src={progressbar} alt="" srcset="" id="progress_img"/>
             <img src={logo} alt="" srcset="" id="prediction_btc"/>

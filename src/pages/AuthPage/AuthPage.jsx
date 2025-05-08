@@ -11,20 +11,32 @@ const AuthPage = () => {
   const navigate = useNavigate();
 
   return (
-    <div className='login_page'>
-        <div className='auth_img_holder'>
-          <div className='auth_back' onClick={() => {window.location.replace("https://iris-landing-xi.vercel.app/")}}>
-            <IoCaretBackOutline />
-          </div>
-          <p>INSPIRED BY THE FUTURE</p>
-          <h1>THE IRIS DASHBOARD</h1>
+    <div className="login_page">
+      <div className="auth_img_holder">
+        <div
+          className="auth_back"
+          onClick={() => {
+            window.location.replace("https://iris-landing-xi.vercel.app/");
+          }}
+        >
+          <IoCaretBackOutline />
         </div>
-        <div className='auth_content'>
-            {
-              params?.type === 'login'? <Login />: <Register />
-            }
+        <p>INSPIRED BY THE FUTURE</p>
+        <h1>THE IRIS DASHBOARD</h1>
+      </div>
+      <div className="auth_content">
+      <div
+          className="auth_back back_mobile"
+          onClick={() => {
+            window.location.replace("https://iris-landing-xi.vercel.app/");
+          }}
+        >
+          <IoCaretBackOutline />
         </div>
+        {params?.type === "login" ? <Login /> : <Register />}
+      </div>
     </div>
+
   )
 }
 

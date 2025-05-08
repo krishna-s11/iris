@@ -9,7 +9,7 @@ const Header = () => {
             <p>Octify / <span>Home</span></p>
             <p>Dashboard</p>
         </div>
-        <img src={bell} alt="notifications" srcset="" />
+        <img src={bell} alt="notifications"/>
     </div>
   )
 }

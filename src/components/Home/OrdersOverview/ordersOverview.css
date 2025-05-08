@@ -1,0 +1,51 @@
+.orders_overview {
+    flex: 1 1 30%;
+    max-width: 30%;
+    background: linear-gradient(126.97deg, rgba(6, 11, 40, 0.74) 28.26%, rgba(10, 14, 35, 0.71) 91.2%);
+    backdrop-filter: blur(120px);
+    padding: 30px 20px;
+    border-radius: 20px;
+    box-sizing: border-box;
+  }
+.orders_overview h1{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.subtitle{
+    font-weight: 700;
+    font-size: 14px;
+    color: #A0AEC0;
+    margin-bottom: 20px;
+}
+.orders_contentbox{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.orders_contentbox img{
+    width: 22px;
+    margin-right: 20px;
+}
+.orders_contentbox p{
+    font-weight: 400;
+    font-size: 14px;
+}
+.order_sub{
+    font-weight: 400;
+    font-size: 12px;
+    color: #A0AEC0;
+}
+
+@media screen and (max-width: 993px) {
+    .orders_overview {
+        flex: 1 1 100%;
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
+    }
+  
+    .home_content_row {
+      flex-direction: column;
+    }
+  }

@@ -1,15 +1,21 @@
-.homepage{
+.homepage {
     width: 100%;
     margin-top: 30px;
-}
-.home_topholder{
+    padding: 0 15px; /* reduce side padding for smaller screens */
+    box-sizing: border-box;
+  }
+  
+  .home_topholder {
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.home_personal_metric{
-    width: 250px;
+    flex-wrap: wrap; /* allow wrapping on smaller screens */
+    gap: 20px; /* spacing between cards */
+    justify-content: center; /* center items when wrapping */
+  }
+  
+  .home_personal_metric {
+    flex: 1 1 250px; /* grow, shrink, basis */
+    max-width: 250px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -19,48 +25,157 @@
     padding: 20px;
     border-radius: 20px;
     overflow: hidden;
-}
-.home_personal_metric p:first-child{
+  }
+  
+  .home_personal_metric p:first-child {
     font-size: 12px;
     font-weight: 400;
     color: #A0AEC0;
-}
-.home_personal_metric p:last-child{
+  }
+  
+  .home_personal_metric p:last-child {
     font-size: 18px;
     font-weight: 700;
     display: flex;
     align-items: center;
-}
-.home_personal_metric p span{
+  }
+  
+  .home_personal_metric p span {
     color: #01B574;
     font-size: 14px;
     font-weight: 700;
     margin-left: 5px;
     margin-top: 1px;
-}
-.home_content_row{
+  }
+  
+  .home_personal_metric img {
+    width: 40px;
+  }
+  
+  /* 🔁 Responsive Tweaks */
+  @media (max-width: 768px) {
+    .home_personal_metric {
+      flex: 1 1 100%;
+      justify-content: space-between;
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .home_personal_metric {
+      flex-direction: row;
+      align-items: center;
+    }
+  
+    .home_personal_metric img {
+      margin-top: 10px;
+    }
+  }  
+  .home_content_row {
     margin-top: 20px;
     display: flex;
-}
-.user_idcard{
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .user_idcard {
     width: 400px;
     height: 344px;
     background: url(../../assets/idcard.png);
     background-size: cover;
+    background-position: center;
     border-radius: 20px;
     padding: 30px;
     display: flex;
     align-items: center;
-}
-.user_idcard p{
+    flex-shrink: 0;
+    box-sizing: border-box;
+  }
+  
+  .user_idcard p {
     font-weight: 400;
     font-size: 14px;
     color: #A0AEC0;
-}
-.user_idcard h1{
+  }
+  
+  .user_idcard h1 {
     font-weight: 700;
     font-size: 28px;
     color: #FFFFFF;
     margin-top: 5px;
     margin-bottom: 20px;
+  }
+  
+  .user_chart {
+    flex: 1;
+    min-width: 300px;
+    height: 344px;
+    border-radius: 20px;
+    padding: 30px 20px;
+    background: linear-gradient(126.97deg, rgba(6, 11, 40, 0.74) 28.26%, rgba(10, 14, 35, 0.71) 91.2%);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .user_chart > div {
+    flex: 1;
+  }
+  
+  
+  .user_chart h1 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  /* 🔁 Responsive Tweaks */
+  @media (max-width: 992px) {
+    .home_content_row {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .user_idcard {
+      width: 100%;
+    }
+  
+    .user_chart {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .user_idcard {
+      height: auto;
+      padding: 20px;
+    }
+  
+    .user_idcard h1 {
+      font-size: 22px;
+    }
+  
+    .user_chart {
+      height: auto;
+      padding: 20px;
+    }
+  
+    .user_chart h1 {
+      font-size: 16px;
+    }
+  }
+  
+.prediction_panel_holder{
+    border-radius: 20px;
+    padding: 30px 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* border: 1px solid #fff; */
+    background: linear-gradient(126.97deg, rgba(30, 38, 70, 0.35) 28.26%, rgba(45, 55, 85, 0.3) 91.2%);
 }
+.prediction_panel_holder h1{
+    font-weight: 700;
+    font-size: 18px;
+}
+

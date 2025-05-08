@@ -93,7 +93,7 @@ const Register = () => {
         required
       />
 
-      <p className="login_label">Binance API Key</p>
+      {/* <p className="login_label">Binance API Key</p>
       <input
         type="text"
         id="binance_api_key"
@@ -113,7 +113,7 @@ const Register = () => {
         value={formData.binance_api_secret}
         onChange={handleChange}
         required
-      />
+      /> */}
 
       <button className="btn_signIn" type="submit" style={{ marginTop: '30px' }}>
         Sign Up

@@ -7,6 +7,7 @@
     background-color: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(120px);
     -webkit-backdrop-filter: blur(120px);
+    position: relative;
 }   
 .titlebox{
     display: flex;
@@ -51,3 +52,50 @@
     height: 30px;
     margin-right: 15px;
 }
+#btn_collapse{
+    position: absolute;
+    font-size: 36px;
+    right: 5px;
+    bottom: 10px;
+}
+#collapse{
+    font-size: 24px;
+}
+
+/* Mobile */
+.mob_sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #060B28;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    z-index: 999;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .mob_sidemenu {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .mob_sidemenu li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 12px;
+  }
+  
+  .mob_sidemenu li img {
+    width: 28px;
+    height: 28px;
+  }
+  

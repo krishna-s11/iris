@@ -1,13 +1,20 @@
 .predictionPanel{
     width: 320px;
     height: 344px;
-    margin-left: 30px;
+    /* margin-left: 30px; */
     background: linear-gradient(126.97deg, rgba(6, 11, 40, 0.74) 28.26%, rgba(10, 14, 35, 0.71) 91.2%);
     backdrop-filter: blur(120px);
     border-radius: 20px;
     overflow: hidden;
     padding: 30px 20px;
     position: relative;
+    margin-bottom: 20px;
+}
+.predictionPanel:not(:last-child){
+    margin-right: 20px;
+}
+.predictionPanel:last-child{
+    margin-bottom: 0px;
 }
 .predictionPanel h1{
     font-weight: 700;

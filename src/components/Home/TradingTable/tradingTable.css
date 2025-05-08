@@ -1,12 +1,17 @@
-.trading_table{
-    width: 750px;
-    height: 344px;
+.trading_table {
+    flex: 1 1 65%;
+    max-width: 65%;
     background: linear-gradient(126.97deg, rgba(6, 11, 40, 0.74) 28.26%, rgba(10, 14, 35, 0.71) 91.2%);
-    backdrop-filter: blur(120px);
-    border-radius: 20px;
-    overflow: hidden;
     padding: 30px 20px;
+    border-radius: 20px;
+    overflow-x: auto;
+    box-sizing: border-box;
+  }
+.trading_table table {
+    width: 100%;
+    border-collapse: collapse;
 }
+
 .trading_table h1{
     font-weight: 700;
     font-size: 18px;
@@ -34,3 +39,24 @@
     font-size: 14px;
     padding: 10px 0;
 }
+.trading_table th,
+.trading_table td {
+  padding: 10px;
+  text-align: left;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+
+@media screen and (max-width: 993px) {
+    .trading_table {
+        flex: 1 1 100%;
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
+    }
+  
+    .home_content_row {
+      flex-direction: column;
+    }
+  }
