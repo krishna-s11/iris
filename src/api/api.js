@@ -2,7 +2,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 
 const api = axios.create({
-  baseURL: import.meta.env.DEV ? '/auth' : 'http://13.53.142.82',
+  baseURL: 'https://13.53.142.82',
   headers: {
     'Content-Type': 'application/json',
   },
