@@ -117,7 +117,7 @@ const Homepage = () => {
             </div>
             <div className='home_personal_metric'>
                 <div>
-                    <p>Etherium (ETH)</p>
+                    <p>Ethereum (ETH)</p>
                     <p>$1900<span> +8%</span></p>
                 </div>
                 <img src={eth} alt="money" srcset="" />
@@ -173,7 +173,7 @@ const Homepage = () => {
         </div>
         <div className='home_content_row prediction_panel_holder'>
                 <PredictionPanel logo={btc} name="Bitcoin (BTC)" confidence="92"/>
-                <PredictionPanel logo={eth} name="Etherium (ETH)" confidence="95"/>
+                <PredictionPanel logo={eth} name="Ethereum (ETH)" confidence="95"/>
                 <PredictionPanel logo={solana} name="Solana (SOL)" confidence="89"/>
         </div>
         <div className='home_content_row'>

@@ -1,6 +1,6 @@
 import React from 'react'
 import "./predictionPanel.css";
-import progressbar from "../../../assets/progressbar.png";
+import progressbar from "../../../assets/progressbar.svg";
 
 const PredictionPanel = ({logo,name,confidence}) => {
   return (

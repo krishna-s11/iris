@@ -16,7 +16,7 @@ const AuthPage = () => {
         <div
           className="auth_back"
           onClick={() => {
-            window.location.replace("https://iris-landing-xi.vercel.app/");
+            window.location.replace("https://www.irissai.com/");
           }}
         >
           <IoCaretBackOutline />
@@ -28,7 +28,7 @@ const AuthPage = () => {
       <div
           className="auth_back back_mobile"
           onClick={() => {
-            window.location.replace("https://iris-landing-xi.vercel.app/");
+            window.location.replace("https://www.irissai.com/");
           }}
         >
           <IoCaretBackOutline />

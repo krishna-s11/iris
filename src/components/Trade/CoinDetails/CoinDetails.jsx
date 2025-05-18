@@ -30,8 +30,8 @@ const CoinDetail = ({ coin, chartData, loading, selectedTimeframe, onTimeframeCh
         label: `${coin.name} Price (USD)`,
         data: chartData?.prices.map((price) => price[1]) || [],
         fill: true,
-        backgroundColor: 'rgba(0,117,255,0.1)',
-        borderColor: '#0075FF',
+        backgroundColor: 'rgba(59,0,211,0.1)',
+        borderColor: '#3d0adc',
         tension: 0.4,
         pointRadius: 2,
       },
@@ -90,7 +90,7 @@ const CoinDetail = ({ coin, chartData, loading, selectedTimeframe, onTimeframeCh
 
       {loading ? (
         <div className="loader-wrapper">
-            <ClipLoader size={50} color="#0075FF" />
+            <ClipLoader size={50} color="#3d0adc" />
         </div>
       ) : (
         <div className="chart-container">

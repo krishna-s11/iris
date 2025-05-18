@@ -32,12 +32,12 @@
 }
 
 .coin-item:hover {
-  background-color: #0075FF;
+  background-color: #3d0adc;
 }
 
 .coin-item.active {
-  background-color: #0075FF;
-  box-shadow: 0 0 10px #0075FF;
+  background-color: #3d0adc;
+  box-shadow: 0 0 10px #3d0adc;
 }
 
 .coin-logo-small {

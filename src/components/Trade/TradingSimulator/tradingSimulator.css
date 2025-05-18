@@ -62,7 +62,7 @@
 
 .swap_button {
   border: none;
-  background: #0075ff;
+  background: #3d0adc;
   color: white;
   font-size: 18px;
   width: 50px;
@@ -97,7 +97,7 @@
 }
 .wallet_icon {
   font-size: 28px;
-  color: #0075FF;
+  color: #3d0adc;
   transform: translateY(8px);
 }
 
@@ -133,8 +133,8 @@
 }
 
 .toggle_button.active {
-  background-color: #0075FF;
-  border-color: #0075FF;
+  background-color: #3d0adc;
+  border-color: #3d0adc;
 }
 
 .conversion_rate {

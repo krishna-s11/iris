@@ -29,7 +29,7 @@ const Chatbot = () => {
             <div className="chat-header">
                 <div className="header-info">
                     <RiRobot3Fill id='chatbot-logo'/>
-                    <h2 className='logo-text'>Chatbot</h2>
+                    <h2 className='logo-text'>Iris AI</h2>
                 </div>
                 <button><IoIosArrowDropdownCircle /></button>
             </div>
