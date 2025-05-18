@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import "./sidebar.css";
 import logo from "../../assets/iris_logo.png";
+import wallet from "../../assets/wallet.png";
+import trade from "../../assets/trade.png";
+import profile from "../../assets/profile.png";
+import signout from "../../assets/signout.png";
 import divider from "../../assets/divider.png";
 import dash_home from "../../assets/dash_home.svg";
 import profile_ico from "../../assets/profile_ico.svg";
 import signout_ico from "../../assets/signout_ico.svg";
 import { useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import money from "../../assets/money.svg";
 
 // Desktop Sidebar
 const Sidebar = () => {
@@ -27,18 +32,20 @@ const Sidebar = () => {
   return (
     <div className='sidebar'>
       <div className="titlebox">
-        <img src={logo} alt="Octify"/>
+        <img src={logo} alt="Iris"/>
       </div>
       <div className="divider">
         <img src={divider} alt="divider"/>
       </div>
       <div style={{display: "flex", justifyContent: "center"}}>
         <ul className='sidemenu'>
-          <li className={`menu-item ${params.page === 'home' ? 'active' : ''}`}>
+          <li className={`menu-item ${params.page === 'home' ? 'active' : ''}`} onClick={() => {navigate('/dashboard/home')}}>
             <img src={dash_home} alt="" /> Dashboard
           </li>
-          <li><img src={profile_ico} alt="" /> Profile</li>
-          <li onClick={handleLogout}><img src={signout_ico} alt="" /> Sign Out</li>
+          <li className={`menu-item ${params.page === 'trade' ? 'active' : ''}`} onClick={() => {navigate('/dashboard/trade')}}><img src={trade} style={{borderRadius: "11px", marginBottom: "4px"}} alt=""  /> Trade</li>
+          <li className={`menu-item ${params.page === 'wallet' ? 'active' : ''}`} onClick={() => {navigate('/dashboard/wallet')}}><img src={wallet} style={{borderRadius: "11px", marginBottom: "4px"}} alt="" /> Wallet</li>
+          <li><img src={profile} style={{borderRadius: "10px", marginBottom: "4px"}} alt="" /> Profile</li>
+          <li onClick={handleLogout}><img src={signout} style={{borderRadius: "10px", marginBottom: "4px"}} alt="" /> Sign Out</li>
         </ul>
       </div>
     </div>
@@ -65,7 +72,10 @@ const MobSidebar = () => {
     <div className='mob_sidebar'>
       <ul className='mob_sidemenu'>
         <li className={`menu-item ${params.page === 'home' ? 'active' : ''}`}>
-          <img src={dash_home} alt="" />
+          <img src={dash_home} alt="" onClick={() => {navigate('/dashboard/home')}}/>
+        </li>
+        <li className={`menu-item ${params.page === 'home' ? 'active' : ''}`}>
+          <img src={money} alt="" onClick={() => {navigate('/dashboard/wallet')}}/>
         </li>
         <li><img src={profile_ico} alt="" /></li>
         <li onClick={handleLogout}><img src={signout_ico} alt="" /></li>

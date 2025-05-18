@@ -12,8 +12,6 @@ const Register = () => {
     name: '',
     email: '',
     password: '',
-    binance_api_key: '',
-    binance_api_secret: '',
   });
 
   const handleChange = (e) => {
@@ -28,13 +26,12 @@ const Register = () => {
     e.preventDefault();
 
     try {
-      const { email, password, binance_api_key, binance_api_secret } = formData;
+      const { email, password, name } = formData;
 
-      const response = await axios.post('https://final-backend-vyuz.onrender.com/auth/register', {
+      const response = await axios.post('http://13.53.142.82/auth/register', {
+        username: name,
         email,
         password,
-        binance_api_key,
-        binance_api_secret,
       }, {
         headers: {
           'Content-Type': 'application/json',

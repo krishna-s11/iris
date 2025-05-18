@@ -2,7 +2,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 
 const api = axios.create({
-  baseURL: 'https://final-backend-vyuz.onrender.com',
+  baseURL: 'http://13.53.142.82',
   headers: {
     'Content-Type': 'application/json',
   },

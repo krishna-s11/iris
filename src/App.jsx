@@ -15,7 +15,7 @@ function App() {
       <Routes>
         {/* <Route path="/" element={<LandingPage />}/> */}
         <Route path="/auth/:type" element={<AuthPage />}/>
-        <Route path="/dashboard/:page" element={<DashboardLayout />}/>
+        <Route path="/dashboard/:page" element={<PrivateRoute><DashboardLayout /></PrivateRoute>}/>
       </Routes>
       <ToastContainer
         position="top-center"

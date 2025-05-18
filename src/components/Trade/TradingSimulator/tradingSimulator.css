@@ -1,0 +1,144 @@
+.trade_card {
+  background: #0a0f1a;
+  padding: 30px;
+  border-radius: 20px;
+  width: 100%;
+  margin: auto;
+  color: white;
+}
+
+
+.wallet_label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #a0aec0;
+  margin: 0;
+}
+
+.wallet_balance {
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0;
+}
+
+.swap_section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.swap_box {
+  flex: 1;
+  min-width: 250px;
+}
+
+.swap_label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+
+.login_input {
+  width: 100%;
+  height: 50px;
+  border-radius: 20px;
+  padding: 0 20px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 2px solid #99c8ff;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.swap_button_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swap_button {
+  border: none;
+  background: #0075ff;
+  color: white;
+  font-size: 18px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+  padding-top: 5px;
+}
+
+.swap_button:hover {
+  background: #005ec2;
+}
+
+.trade_button {
+  margin-top: 30px;
+}
+
+.react_select {
+  margin-top: 10px;
+}
+
+
+/* Wallet icon alignment fix */
+.wallet_card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+}
+.wallet_icon {
+  font-size: 28px;
+  color: #0075FF;
+  transform: translateY(8px);
+}
+
+.trade_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Heading */
+.trade_heading {
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+}
+
+/* Buy/Sell toggle */
+.trade_toggle {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.toggle_button {
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: 2px solid #99C8FF;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-weight: 600;
+}
+
+.toggle_button.active {
+  background-color: #0075FF;
+  border-color: #0075FF;
+}
+
+.conversion_rate {
+  color: #A0AEC0;
+  font-size: 14px;
+  margin: 5px 0 10px 5px;
+}

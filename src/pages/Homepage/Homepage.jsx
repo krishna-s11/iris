@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect,useState } from 'react'
 import "./homepage.css";
 import money from "../../assets/money.svg";
 import world from "../../assets/world.svg";
@@ -13,6 +13,8 @@ import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, Tooltip, Legend, Ca
 import OrdersOverview from '../../components/Home/OrdersOverview/OrdersOverview';
 
 const Homepage = () => {
+
+    const [userName, setUserName] = useState("");
 
     const fetchPortfolio = async () => {
         try {
@@ -31,12 +33,23 @@ const Homepage = () => {
         }
     };
 
+    const fetchUserInfo = async () => {
+      try {
+          const response = await api.get("/auth/userinfo");
+          console.log(response);
+          setUserName(response.data?.username || "User");
+      } catch (error) {
+          console.error("Failed to fetch user info:", error);
+      }
+    };
+
     useEffect (() => {
         const getPortfolio = async () => {
             const data = await fetchPortfolio();
             console.log(data);
           };
           getPortfolio();
+          fetchUserInfo();
     },[])
 
     const data = [
@@ -120,7 +133,7 @@ const Homepage = () => {
             <div className='user_idcard'>
                 <div>
                     <p>Welcome back,</p>
-                    <h1>Mark Johnson</h1>
+                    <h1>{userName}</h1>
                     <p>Glad to see you again!</p>
                     <p>Step into the future.</p>
                 </div>

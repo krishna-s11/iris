@@ -41,11 +41,11 @@ const Login = () => {
       e.preventDefault();
       setLoading(true);
       try {
-        const response = await axios.post('https://final-backend-vyuz.onrender.com/auth/login', {
+        const response = await axios.post('http://13.53.142.82/auth/login', {
           email: formData.email,
           password: formData.password
         });
-    
+        console.log(response.data);
         const { access_token } = response.data;
     
         if (formData.rememberMe) {

@@ -1,0 +1,52 @@
+.coin-list {
+  padding: 10px 0;
+}
+
+.coin-list-heading {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.coins-scroll {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scrollbar-width: none;
+}
+
+.coins-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.coin-item {
+  background-color: rgba(0, 117, 255, 0.2);
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+  transition: background 0.3s ease;
+}
+
+.coin-item:hover {
+  background-color: #0075FF;
+}
+
+.coin-item.active {
+  background-color: #0075FF;
+  box-shadow: 0 0 10px #0075FF;
+}
+
+.coin-logo-small {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.coin-item span {
+  color: white;
+  font-size: 16px;
+}
