@@ -1,6 +1,6 @@
 import React, { useEffect,useState } from 'react'
 import "./homepage.css";
-import money from "../../assets/money.svg";
+import money from "../../assets/money1.png";
 import world from "../../assets/world.svg";
 import document from "../../assets/document.svg";
 import api from "../../api/api";
@@ -106,7 +106,7 @@ const Homepage = () => {
                     <p>Total Assets</p>
                     <p>$53,000<span> +21%</span></p>
                 </div>
-                <img src={money} alt="money" srcset="" />
+                <img src={money} style={{borderRadius: "11px"}} alt="money" srcset="" />
             </div>
             <div className='home_personal_metric'>
                 <div>

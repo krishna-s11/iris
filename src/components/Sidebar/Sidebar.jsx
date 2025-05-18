@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import "./sidebar.css";
 import logo from "../../assets/iris_logo.png";
-import wallet from "../../assets/wallet.png";
-import trade from "../../assets/trade.png";
-import profile from "../../assets/profile.png";
-import signout from "../../assets/signout.png";
+import wallet from "../../assets/wallet1.png";
+import trade from "../../assets/trade1.png";
+import profile from "../../assets/user1.png";
+import signout from "../../assets/signout1.png";
 import divider from "../../assets/divider.png";
-import dash_home from "../../assets/dash_home.svg";
+import dash_home from "../../assets/home.png";
 import profile_ico from "../../assets/profile_ico.svg";
 import signout_ico from "../../assets/signout_ico.svg";
 import { useNavigate, useParams } from 'react-router-dom';
@@ -40,7 +40,7 @@ const Sidebar = () => {
       <div style={{display: "flex", justifyContent: "center"}}>
         <ul className='sidemenu'>
           <li className={`menu-item ${params.page === 'home' ? 'active' : ''}`} onClick={() => {navigate('/dashboard/home')}}>
-            <img src={dash_home} alt="" /> Dashboard
+            <img src={dash_home} style={{borderRadius: "11px", marginBottom: "4px"}} alt="" /> Dashboard
           </li>
           <li className={`menu-item ${params.page === 'trade' ? 'active' : ''}`} onClick={() => {navigate('/dashboard/trade')}}><img src={trade} style={{borderRadius: "11px", marginBottom: "4px"}} alt=""  /> Trade</li>
           <li className={`menu-item ${params.page === 'wallet' ? 'active' : ''}`} onClick={() => {navigate('/dashboard/wallet')}}><img src={wallet} style={{borderRadius: "11px", marginBottom: "4px"}} alt="" /> Wallet</li>
@@ -72,7 +72,7 @@ const MobSidebar = () => {
     <div className='mob_sidebar'>
       <ul className='mob_sidemenu'>
         <li className={`menu-item ${params.page === 'home' ? 'active' : ''}`}>
-          <img src={dash_home} alt="" onClick={() => {navigate('/dashboard/home')}}/>
+          <img src={home} alt="" onClick={() => {navigate('/dashboard/home')}}/>
         </li>
         <li className={`menu-item ${params.page === 'home' ? 'active' : ''}`}>
           <img src={money} alt="" onClick={() => {navigate('/dashboard/wallet')}}/>
