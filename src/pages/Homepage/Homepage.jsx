@@ -37,7 +37,6 @@ const Homepage = () => {
     const fetchUserInfo = async () => {
       try {
           const response = await api.get("/auth/userinfo");
-          console.log(response);
           setUserName(response.data?.username || "User");
       } catch (error) {
           console.error("Failed to fetch user info:", error);
