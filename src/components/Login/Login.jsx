@@ -41,7 +41,7 @@ const Login = () => {
       e.preventDefault();
       setLoading(true);
       try {
-        const response = await axios.post('http://13.53.142.82/auth/login', {
+        const response = await axios.post('/auth/login', {
           email: formData.email,
           password: formData.password
         });
