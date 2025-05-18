@@ -82,7 +82,8 @@
     width: 400px;    
     height: 344px;    
     /* background: linear-gradient(135deg, rgba(84, 9, 218, 0.15), rgba(138, 43, 226, 0.1));     */
-    background-size: cover;    
+    background-size: cover;
+    background-color: #060622;
     background-position: center;    
     border-radius: 20px;    
     padding: 30px;    
