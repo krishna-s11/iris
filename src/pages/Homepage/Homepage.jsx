@@ -141,7 +141,7 @@ const Homepage = () => {
                 </div>
                 <div className="user_idcard_content">
                     <p style={{color: "#CBD5E0"}}>Welcome back,</p>
-                    <h1 style={{color: "white", textShadow: "0 2px 4px rgba(0,0,0,0.3)"}}>{userName}</h1>
+                    <h1 style={{color: "white", textShadow: "0 2px 4px rgba(0,0,0,0.3)"}}>{username}</h1>
                     <p style={{color: "#CBD5E0"}}>Glad to see you again!</p>
                     <p style={{color: "#CBD5E0"}}>Step into the future.</p>
                 </div>
