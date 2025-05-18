@@ -104,18 +104,47 @@
     gap: 20px;
   }
   
-  .user_idcard {
-    width: 400px;
-    height: 344px;
-    background: url(../../assets/idcard1.png);
-    background-size: cover;
-    background-position: center;
-    border-radius: 20px;
-    padding: 30px;
+  .user_idcard {    
+    width: 400px;    
+    height: 344px;    
+    background: linear-gradient(135deg, rgba(84, 9, 218, 0.15), rgba(138, 43, 226, 0.1));    
+    background-size: cover;    
+    background-position: center;    
+    border-radius: 20px;    
+    padding: 30px;    
+    display: flex;    
+    align-items: center;    
+    flex-shrink: 0;    
+    box-sizing: border-box;    
+    position: relative;    
+    overflow: hidden;    
+    z-index: 0;
+    border: 1px solid rgba(138, 43, 226, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(84, 9, 218, 0.15);
+    backdrop-filter: blur(4px);
+  }    
+
+  .ripple-container {    
+    position: absolute;    
+    top: 0;    
+    left: 0;    
+    right: 0;    
+    bottom: 0;    
+    z-index: 1;  
     display: flex;
     align-items: center;
-    flex-shrink: 0;
-    box-sizing: border-box;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+  
+  .user_idcard_content {
+    position: relative;
+    z-index: 20;
+    width: 100%;
+    color: white;
   }
   
   .user_idcard p {

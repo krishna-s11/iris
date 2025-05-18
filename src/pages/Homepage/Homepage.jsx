@@ -11,6 +11,7 @@ import solana from "../../assets/solana.png";
 import TradingTable from '../../components/Home/TradingTable/TradingTable';
 import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, Tooltip, Legend, CartesianGrid } from 'recharts';
 import OrdersOverview from '../../components/Home/OrdersOverview/OrdersOverview';
+import { Ripple } from '../../components/magicui/ripple';
 
 const Homepage = () => {
 
@@ -131,11 +132,18 @@ const Homepage = () => {
         </div>
         <div className='home_content_row'>
             <div className='user_idcard'>
-                <div>
-                    <p>Welcome back,</p>
-                    <h1>{userName}</h1>
-                    <p>Glad to see you again!</p>
-                    <p>Step into the future.</p>
+                <div className="ripple-container">
+                    <Ripple 
+                        mainCircleSize={40} 
+                        mainCircleOpacity={0.7} 
+                        numCircles={8} 
+                    />
+                </div>
+                <div className="user_idcard_content">
+                    <p style={{color: "#CBD5E0"}}>Welcome back,</p>
+                    <h1 style={{color: "white", textShadow: "0 2px 4px rgba(0,0,0,0.3)"}}>{userName}</h1>
+                    <p style={{color: "#CBD5E0"}}>Glad to see you again!</p>
+                    <p style={{color: "#CBD5E0"}}>Step into the future.</p>
                 </div>
             </div>
             <div className='user_chart'>
