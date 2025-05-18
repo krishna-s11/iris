@@ -11,6 +11,8 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --foreground: rgba(138, 43, 226, 0.8);
 }
 *{
   margin: 0;
@@ -20,4 +22,20 @@
 }
 body{
   overflow-x: hidden;
+}
+
+@keyframes ripple {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0.6;
+  }
+}
+
+.animate-ripple {
+  animation: ripple var(--duration, 3s) ease calc(var(--i, 0) * 0.3s) infinite;
 }
