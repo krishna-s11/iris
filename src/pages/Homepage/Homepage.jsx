@@ -103,28 +103,29 @@ const Homepage = () => {
             <div className='home_personal_metric'>
                 <div>
                     <p>Total Assets</p>
-                    <p>$53,000<span> +21%</span></p>
+                    <p>$0<span> +0%</span></p>
                 </div>
                 <img src={money} style={{borderRadius: "11px"}} alt="money" srcset="" />
             </div>
             <div className='home_personal_metric'>
                 <div>
-                    <p>Bitcoin (BTC)</p>
-                    <p>$2400<span style={{color: "#E31A1A"}}>-13%</span></p>
+                    <p>Bitcoin (BTC) Balance</p>
+                    <p>$0<span>0%</span></p>
                 </div>
                 <img src={btc} alt="btc" srcset="" />
             </div>
             <div className='home_personal_metric'>
                 <div>
-                    <p>Ethereum (ETH)</p>
-                    <p>$1900<span> +8%</span></p>
+                    <p>Ethereum (ETH) Balance</p>
+                    <p>$0<span> +0%</span></p>
                 </div>
                 <img src={eth} alt="money" srcset="" />
             </div>
+            {/* style={{color: "#E31A1A"}} */}
             <div className='home_personal_metric'>
                 <div>
-                    <p>Solana (SOL)</p>
-                    <p>$1180.8<span style={{color: "#E31A1A"}}> -16%</span></p>
+                    <p>Solana (SOL) Balance</p>
+                    <p>$0<span> +0%</span></p>
                 </div>
                 <img src={solana} alt="money" srcset="" />
             </div>

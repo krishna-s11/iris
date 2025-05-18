@@ -13,7 +13,7 @@ const PredictionPanel = ({logo,name,confidence}) => {
         </div>
         <div className='prediction_content'>
             <div>
-                <h2>9 May</h2>
+                <h2>26 May</h2>
                 <p>Signal Date</p>
             </div>
             <div style={{marginRight:"10px"}}>

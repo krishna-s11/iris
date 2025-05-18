@@ -11,8 +11,8 @@ const OrdersOverview = () => {
     <div className='orders_overview'>
         <h1>Order Overview</h1>
         <p className='subtitle'><span><RiVerifiedBadgeFill style={{color:"#01B574", transform: "translateY(1.8px)", marginRight: "5px"}}/></span>+30% this month</p>
-        <div className='orders_contentbox' >
-            {/* <FaBitcoin style={{fontSize: "22px", marginRight: "20px"}} /> */}
+        <p>No order placed</p>
+        {/* <div className='orders_contentbox' >
             <img src={bitcoin} alt="" srcset="" />
             <div className='orders_content'>
                 <p>$2400, 0.025 BTC</p>
@@ -32,7 +32,7 @@ const OrdersOverview = () => {
                 <p>$1180.8, 8 SOL</p>
                 <p className='order_sub'>04 May 6:13 PM</p>
             </div>
-        </div>
+        </div> */}
     </div>
   )
 }

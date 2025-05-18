@@ -15,14 +15,15 @@ const TradingTable = () => {
                 <th>Status</th>
                 <th>P&L</th>
             </tr>
-            <tr>
+            {/* <tr>
               <td>Bitcoin</td>
               <td>Payment</td>
               <td>$94708</td>
               <td>92%</td>
               <td style={{color: "#01B574"}}>Live</td>
               <td style={{color: "#E31A1A"}}>-0.003%</td>
-            </tr>
+            </tr> */}
+            <p style={{marginLeft: "10px", marginTop: "10px", fontSize: "14px", marginBottom: "100px"}}>No trade available.</p>
         </table>
     </div>
   )
