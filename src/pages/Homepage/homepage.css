@@ -153,6 +153,20 @@
     flex: 1;
   }
   
+  .spinner-text {
+  color: #CBD5E0;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.chart-spinner {
+  text-align: center;
+  color: #CBD5E0;
+  padding: 40px 0;
+  font-size: 16px;
+  font-style: italic;
+}
+
   
   .user_chart h1 {
     font-size: 18px;

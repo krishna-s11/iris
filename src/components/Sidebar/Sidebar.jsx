@@ -20,6 +20,7 @@ const Sidebar = () => {
 
   const handleLogout = () => {
     localStorage.removeItem('token');
+    localStorage.removeItem('walletStatus');
     sessionStorage.removeItem('token');
     toast.success('Signed out successfully!', {
       onClose: () => {
@@ -44,7 +45,7 @@ const Sidebar = () => {
           </li>
           <li className={`menu-item ${params.page === 'trade' ? 'active' : ''}`} onClick={() => {navigate('/dashboard/trade')}}><img src={trade} style={{borderRadius: "11px", marginBottom: "4px"}} alt=""  /> Trade</li>
           <li className={`menu-item ${params.page === 'wallet' ? 'active' : ''}`} onClick={() => {navigate('/dashboard/wallet')}}><img src={wallet} style={{borderRadius: "11px", marginBottom: "4px"}} alt="" /> Wallet</li>
-          <li><img src={profile} style={{borderRadius: "10px", marginBottom: "4px"}} alt="" /> Profile</li>
+          <li className={`menu-item ${params.page === 'profile' ? 'active' : ''}`} onClick={() => {navigate('/dashboard/profile')}}><img src={profile} style={{borderRadius: "10px", marginBottom: "4px"}} alt="" /> Profile</li>
           <li onClick={handleLogout}><img src={signout} style={{borderRadius: "10px", marginBottom: "4px"}} alt="" /> Sign Out</li>
         </ul>
       </div>

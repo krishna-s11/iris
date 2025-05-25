@@ -1,0 +1,51 @@
+.wallet_history {
+  flex: 1 1 100%;
+  background: linear-gradient(126.97deg, rgba(6, 11, 40, 0.74) 28.26%, rgba(10, 14, 35, 0.71) 91.2%);
+  padding: 30px 20px;
+  border-radius: 20px;
+  overflow-x: auto;
+  box-sizing: border-box;
+  margin-top: 30px;
+}
+
+.wallet_history h1 {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.wallet_history .prediction_subtitle {
+  font-size: 14px;
+  color: #A0AEC0;
+  margin-bottom: 20px;
+}
+
+.wallet_history table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.wallet_history th,
+.wallet_history td {
+  padding: 10px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.wallet_history th {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: #A0AEC0;
+  border-bottom: 1px solid #56577A;
+}
+
+.wallet_history th:first-child {
+  width: 180px;
+}
+
+.wallet_history td {
+  color: #E2E8F0;
+}

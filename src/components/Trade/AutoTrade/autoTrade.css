@@ -1,0 +1,121 @@
+.auto_trade_card {
+  background: #0a0f1a;
+  padding: 30px;
+  border-radius: 20px;
+  width: 100%;
+  color: white;
+  box-shadow: 0 0 20px rgba(61, 10, 220, 0.2);
+}
+
+.auto_trade_title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: white;
+}
+
+.auto_toggle_section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.toggle_label {
+  font-size: 18px;
+  font-weight: 500;
+  color: #99c8ff;
+}
+
+.switch_trade {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+}
+
+.switch_trade input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider.round {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: 0.4s;
+}
+
+.slider.round:before {
+  position: absolute;
+  content: "";
+  height: 20px; width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+.switch_trade input:checked + .slider.round {
+  background-color: #3d0adc;
+}
+
+.switch_trade input:checked + .slider.round:before {
+  transform: translateX(22px);
+}
+
+.risk_section {
+  margin-top: 10px;
+}
+
+.risk_label {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  display: block;
+  color: #99c8ff;
+}
+
+.risk_input_group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.risk_slider {
+  width: 100%;
+  accent-color: #3d0adc;
+}
+
+.risk_number {
+  width: 60px;
+  padding: 5px 10px;
+  border: 2px solid #99c8ff;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-size: 16px;
+  text-align: center;
+}
+.auto_trade_button {
+  margin-top: 30px;
+  width: 100%;
+  height: 48px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #3d0adc;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.auto_trade_button:hover {
+  background-color: #005ec2;
+}

@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import axios from 'axios';
 import Loader from '../../utils/Loader/Loader';
+import { useWallet } from "../../contexts/WalletContext";
 
 const Login = () => {
     const navigate = useNavigate();
@@ -14,6 +15,7 @@ const Login = () => {
       password: '',
       rememberMe: false,
     });
+    const { updateWalletInfo } = useWallet();
 
     useEffect(() => {
       const token = localStorage.getItem('token') || sessionStorage.getItem('token');
@@ -41,28 +43,46 @@ const Login = () => {
       e.preventDefault();
       setLoading(true);
       try {
-        const response = await axios.post('https://1a76-13-53-142-82.ngrok-free.app/auth/login', {
+        const response = await axios.post('http://127.0.0.1:8000/auth/login', {
           email: formData.email,
           password: formData.password
         });
-        console.log(response.data);
+
         const { access_token } = response.data;
-    
+
         if (formData.rememberMe) {
           localStorage.setItem('token', access_token);
         } else {
           sessionStorage.setItem('token', access_token);
         }
+
+        // Set Authorization header for next request
+        const token = access_token;
+        const headers = {
+          Authorization: `Bearer ${token}`
+        };
+
+        // Fetch user info to check binance keys
+        const userInfoRes = await axios.get('http://127.0.0.1:8000/auth/userinfo', { headers });
+        const { binance_api_key, binance_api_secret } = userInfoRes.data;
+        updateWalletInfo(binance_api_key || null, binance_api_secret || null);
+
+        if (binance_api_key && binance_api_secret) {
+          localStorage.setItem('walletStatus', 'done');
+        } else {
+          localStorage.setItem('walletStatus', 'not_done');
+        }
+
         setLoading(false);
         navigate("/dashboard/home");
-    
+
       } catch (error) {
         setLoading(false);
         console.error('Login failed:', error.response?.data?.detail || error.message);
         toast.error("Login failed: " + (error.response?.data?.detail || error.message));
       }
-      //
     };
+
   
     return (
       <form className="login_card" onSubmit={handleSubmit}>

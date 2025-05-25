@@ -4,6 +4,7 @@ import CoinList from '../../components/Trade/CoinList/CoinList';
 import CoinDetail from '../../components/Trade/CoinDetails/CoinDetails';
 import TradingSimulator from '../../components/Trade/TradingSimulator/TradingSimulator';
 import './trade.css';
+import AutoTrade from '../../components/Trade/AutoTrade/AutoTrade';
 
 const coinIds = 'bitcoin,ethereum,solana,cardano,ripple,dogecoin';
 
@@ -89,6 +90,7 @@ const Trade = () => {
       />
       <CoinList coins={coins} selectedCoin={selectedCoin} onSelect={setSelectedCoin} />
       <TradingSimulator />
+      <AutoTrade />
     </div>
   );
 };
