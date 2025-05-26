@@ -43,7 +43,7 @@ const Login = () => {
       e.preventDefault();
       setLoading(true);
       try {
-        const response = await axios.post('http://127.0.0.1:8000/auth/login', {
+        const response = await axios.post('https://backend1.irissai.com/auth/login', {
           email: formData.email,
           password: formData.password
         });
@@ -63,7 +63,7 @@ const Login = () => {
         };
 
         // Fetch user info to check binance keys
-        const userInfoRes = await axios.get('http://127.0.0.1:8000/auth/userinfo', { headers });
+        const userInfoRes = await axios.get('https://backend1.irissai.com/auth/userinfo', { headers });
         const { binance_api_key, binance_api_secret } = userInfoRes.data;
         updateWalletInfo(binance_api_key || null, binance_api_secret || null);
 

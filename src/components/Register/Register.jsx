@@ -28,7 +28,7 @@ const Register = () => {
     try {
       const { email, password, name } = formData;
 
-      const response = await axios.post('http://127.0.0.1:8000/auth/register', {
+      const response = await axios.post('https://backend1.irissai.com/auth/register', {
         username: name,
         email,
         password,
