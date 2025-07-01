@@ -12,6 +12,8 @@ import OrdersOverview from '../../components/Home/OrdersOverview/OrdersOverview'
 import { Ripple } from '../../components/magicui/ripple';
 import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, Tooltip, Legend, CartesianGrid } from 'recharts';
 import useIsWalletConnected from '../../hooks/useIsWalletConnected';
+import Chatbot from '../../components/Chatbot/Chatbot';
+import Dashbot from '../../components/Dashbot/Dashbot';
 
 const cache = {
   get: (key, maxAgeMinutes = 10) => {
@@ -156,6 +158,32 @@ const Homepage = () => {
       });
   }, [userFetched, portfolioFetched, timeseriesFetched]);
 
+  const dummy = [
+    {
+    amount: 1891,
+    gain_loss_percentage: 9
+    },
+    {
+    amount: 877,
+    gain_loss_percentage: 13
+    },
+    {
+    amount: 126,
+    gain_loss_percentage: 16
+    },
+
+  ];
+
+  const dummyTimeseries = [
+  { name: '24/06', Gain: 1000, Loss: 200 },
+  { name: '25/06', Gain: 1200, Loss: 180 },
+  { name: '26/06', Gain: 1400, Loss: 160 },
+  { name: '27/06', Gain: 1600, Loss: 140 },
+  { name: '28/06', Gain: 1800, Loss: 120 },
+  { name: '29/06', Gain: 2000, Loss: 100 },
+  { name: '30/06', Gain: 2300, Loss: 80 },
+];
+
 
   return (
     <div className='homepage'>
@@ -164,20 +192,22 @@ const Homepage = () => {
           <div>
             <p>Total Assets</p>
             <p>
-              {loadingPortfolio ? (
+              {/* {loadingPortfolio ? (
                 <span className="spinner-text">Loading...</span>
               ) : (
                 <>
                   ${portfolioData?.total_value_usd?.toFixed(2) || 0}
                   <span> {portfolioData ? `${portfolioData.overall_gain_loss_percentage.toFixed(2)}%` : '+0%'}</span>
                 </>
-              )}
+              )} */}
+              $2300
+              <span>+12%</span>
             </p>
           </div>
           <img src={money} alt="money" />
         </div>
 
-        {displayedPortfolio.map((coin, index) => (
+        {dummy.map((coin, index) => (
           <div className='home_personal_metric' key={index}>
             <div>
               <p>{coin.coin} Balance</p>
@@ -210,7 +240,7 @@ const Homepage = () => {
           </div>
         </div>
 
-        <div className='user_chart'>
+        {/* <div className='user_chart'>
           <h1>User's Statistics</h1>
           <div style={{ width: '100%', height: '100%' }}>
             {loadingChart ? (
@@ -229,14 +259,32 @@ const Homepage = () => {
               </ResponsiveContainer>
             )}
           </div>
+        </div> */}
+        <div className='user_chart'>
+          <h1>User's Statistics</h1>
+          <div style={{ width: '100%', height: '100%' }}>
+            <ResponsiveContainer width="100%" height="100%">
+              <LineChart data={dummyTimeseries} margin={{ top: 5, right: 0, left: 0, bottom: 5 }}>
+                <CartesianGrid strokeDasharray="3 3" stroke="#56577A" />
+                <XAxis dataKey="name" stroke="#fff" />
+                <YAxis stroke="#fff" />
+                <Tooltip />
+                <Legend />
+                <Line type="monotone" dataKey="Loss" stroke="#82ca9d" activeDot={{ r: 8 }} />
+                <Line type="monotone" dataKey="Gain" stroke="#8884d8" />
+              </LineChart>
+            </ResponsiveContainer>
+          </div>
         </div>
       </div>
-
+       <div className='home_content_row'>
+        <Dashbot />
+      </div>
       <div className='home_content_row prediction_panel_holder'>
         {(signals?.length > 0 ? signals : [
-          { coin: 'Bitcoin (BTC)', Confidence: '-', signal: '-', Direction: '-' },
-          { coin: 'Ethereum (ETH)', Confidence: '-', signal: '-', Direction: '-' },
-          { coin: 'Solana (SOL)', Confidence: '-', signal: '-', Direction: '-' }
+          { coin: 'Bitcoin (BTC)', Confidence: '94%', signal: '03/07', Direction: 'Buy' },
+          { coin: 'Ethereum (ETH)', Confidence: '97%', signal: '03/07', Direction: 'Buy' },
+          { coin: 'Solana (SOL)', Confidence: '93%', signal: '05/07', Direction: 'Sell' }
         ]).map((signal, index) => {
           const logo = signal.coin?.toLowerCase()?.includes('btc') ? btc
             : signal.coin?.toLowerCase()?.includes('eth') ? eth
@@ -249,7 +297,7 @@ const Homepage = () => {
               logo={logo}
               name={signal.coin || `Coin ${index + 1}`}
               confidence={signal.Confidence || '-'}
-              signal={signal['Signal Date'] || '-'}
+              signal={signal.signal}
               direction={signal.Direction || '-'}
             />
           );
